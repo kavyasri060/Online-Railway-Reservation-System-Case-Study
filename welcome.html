@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('background.jpg') center no-repeat;
+            background-size: contain;
+        }
+
+        #welcome-container {
+            text-align: center;
+            color: #fff;
+            /* Set text color to white or any color that contrasts with your image */
+        }
+
+        #enter-button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #enter-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <script>
+        function redirectToLogin() {
+            // Redirect to the login page
+            window.location.href = "login.html";
+        }
+
+        // Listen for the "Enter" key press event
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                redirectToLogin();
+            }
+        });
+    </script>
+</body>
+
+</html>

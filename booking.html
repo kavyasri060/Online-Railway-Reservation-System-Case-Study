@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            /* Light pastel background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #booking-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #6a7a8a;
+            /* Pastel blue for heading */
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            text-align: left;
+            font-weight: bold;
+            color: #34495e;
+            /* Dark pastel blue for labels */
+        }
+
+        select,
+        input {
+            padding: 10px;
+            margin: 5px 0;
+            width: calc(100% - 20px);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #3498db;
+            /* Pastel blue button color */
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+            /* Darker blue on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="booking-container">
+        <h2>Ticket Booking</h2>
+        <form action="booking_process.php" method="post">
+            <label for="pickup">Pickup:</label>
+            <select id="pickup" name="pickup" required>
+                <option value="delhi">Delhi</option>
+                <option value="hyderabad">Hyderabad</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="kolkata">Kolkata</option>
+                <!-- Add more city options as needed -->
+            </select>
+
+            <label for="destination">Destination:</label>
+            <select id="destination" name="destination" required>
+                <option value="delhi">Delhi</option>
+                <option value="hyderabad">Hyderabad</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="kolkata">Kolkata</option>
+                <!-- Add more city options as needed -->
+            </select>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="compartment">Compartment Type:</label>
+            <select id="compartment" name="compartment" required>
+                <option value="ac">AC</option>
+                <option value="non-ac">Non-AC</option>
+            </select>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+</body>
+
+</html>
